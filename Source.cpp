@@ -33,195 +33,6 @@ struct Student {
 	float score;
 	string success;
 	int money;
-
-	Student newStudent() {
-		Student student;
-
-		student.ID = studentsCounter;
-		studentsCounter += 1;
-
-		string vvod = "";
-		string memory = "";
-
-
-		cout << "\n\nВведите фамилию студента: ";
-		clearStream();
-		getline(cin, vvod);
-
-		cout << "\nВведите имя студента: ";
-		getline(cin, memory);
-		vvod = vvod + " " + memory;
-
-		cout << "\nВведите отчество студента: ";
-		getline(cin, memory);
-		vvod = vvod + " " + memory;
-
-
-		student.FIO = vvod;
-
-		char sex;
-		bool flag = true;
-		while (flag) {
-			cout << "\nВведите пол студента:\n1.Mужчина - М \n2.Женщина -  Ж\n3.Другое - Д\n\nВаш выбор: ";
-			cin >> sex;
-			if (sex != 'М' and sex != 'Ж' and sex != 'Д') {
-				loh();
-			}
-
-			else {
-				student.sex = sex;
-				flag = false;
-
-			}
-		}
-
-
-		flag = true;
-		int groupNumber;
-		while (flag) {
-			cout << "\nВ какую группу студент зачислен? (1, 2 или 3)\n\nВаш выбор: ";
-			cin >> groupNumber;
-
-			if (groupNumber != 1 and groupNumber != 2 and groupNumber != 3) {
-
-				loh();
-
-			}
-
-			else {
-				switch (groupNumber) {
-
-				case (!isdigit): {
-					loh();
-				}break;
-
-				case 1:
-				{
-					if (firstGroup >= groupLimit) {
-						cout << "\n\nЭта группа уже набрана :(  \n\n";
-					}
-
-					else {
-
-						firstGroup += 1;
-
-						student.groupNumber = 1;
-
-						student.groupID = firstGroup;
-						cout << "\nНомер студента в группе --> " << student.groupID;
-						flag = false;
-
-					}
-				}break;
-
-				case 2:
-				{
-					if (secondGroup >= groupLimit) {
-						cout << "\n\nЭта группа уже набрана :(  \n\n";
-					}
-
-					else {
-
-						secondGroup += 1;
-
-						student.groupNumber = 2;
-
-						student.groupID = secondGroup;
-						cout << "\nНомер студента в группе --> " << student.groupID;
-						flag = false;
-
-					}
-				}break;
-
-				case 3:
-				{
-					if (thirdGroup >= groupLimit) {
-						cout << "\n\nЭта группа уже набрана :( \n\n";
-					}
-
-					else {
-
-						thirdGroup += 1;
-
-						student.groupNumber = 3;
-
-						student.groupID = thirdGroup;
-						cout << "\nНомер студента в группе --> " << student.groupID;
-						flag = false;
-
-					}
-				}break;
-
-
-
-				}
-			}
-		}
-
-		float count = 0;
-		int grade;
-		flag = true;
-		bool successflag = true;
-		bool withoutScholarship = true;
-		while (flag) {
-			cout << "\nВведите оценки студента за экзамены и зачеты(через пробел) \n";
-			for (int i = 0; i < 8; i++) {
-
-				cin >> grade;
-
-				while (grade > 5 or grade < 2) {
-					loh();
-					cin >> grade;
-
-				}
-
-				if (grade > 0 and grade < 6) {
-					student.grade[i] = grade;
-
-					if (grade < 5) successflag = false;
-					if (grade < 4) withoutScholarship = false;
-
-					count += student.grade[i];
-					flag = false;
-				}
-
-
-			}
-		}
-
-		student.score = count / 8;
-		cout << "\n\nСредний балл студента равен " << student.score << "\n\n";
-
-		if (successflag == true) {
-			student.success = "Отличник";
-		}
-
-		if (successflag == false and withoutScholarship == true) {
-			student.success = "Хорошист";
-		}
-
-		if (successflag == false and withoutScholarship == false) {
-			student.success = "Троечник";
-		}
-
-		bool moneyFlag = true;
-		int money;
-		cout << "\n\nВведите достаток студента: ";
-		cin >> money;
-		while (student.money != money) {
-			if (moneyFlag != isdigit(money)) {
-				student.money = money;
-			}
-			else {
-				loh();
-				cin >> money;
-			}
-		}
-
-
-		database[student.ID] = student;
-		return student;
-	}
 };
 
 
@@ -270,6 +81,194 @@ void cocktailSort() {
 	}
 }
 
+Student newStudent() {
+	Student student;
+
+	student.ID = studentsCounter;
+	studentsCounter += 1;
+
+	string vvod = "";
+	string memory = "";
+
+
+	cout << "\n\nВведите фамилию студента: ";
+	clearStream();
+	getline(cin, vvod);
+
+	cout << "\nВведите имя студента: ";
+	getline(cin, memory);
+	vvod = vvod + " " + memory;
+
+	cout << "\nВведите отчество студента: ";
+	getline(cin, memory);
+	vvod = vvod + " " + memory;
+
+
+	student.FIO = vvod;
+
+	char sex;
+	bool flag = true;
+	while (flag) {
+		cout << "\nВведите пол студента:\n1.Mужчина - М \n2.Женщина -  Ж\n3.Другое - Д\n\nВаш выбор: ";
+		cin >> sex;
+		if (sex != 'М' and sex != 'Ж' and sex != 'Д') {
+			loh();
+		}
+
+		else {
+			student.sex = sex;
+			flag = false;
+
+		}
+	}
+
+
+	flag = true;
+	int groupNumber;
+	while (flag) {
+		cout << "\nВ какую группу студент зачислен? (1, 2 или 3)\n\nВаш выбор: ";
+		cin >> groupNumber;
+
+		if (groupNumber != 1 and groupNumber != 2 and groupNumber != 3) {
+
+			loh();
+
+		}
+
+		else {
+			switch (groupNumber) {
+
+			case (!isdigit): {
+				loh();
+			}break;
+
+			case 1:
+			{
+				if (firstGroup >= groupLimit) {
+					cout << "\n\nЭта группа уже набрана :(  \n\n";
+				}
+
+				else {
+
+					firstGroup += 1;
+
+					student.groupNumber = 1;
+
+					student.groupID = firstGroup;
+					cout << "\nНомер студента в группе --> " << student.groupID;
+					flag = false;
+
+				}
+			}break;
+
+			case 2:
+			{
+				if (secondGroup >= groupLimit) {
+					cout << "\n\nЭта группа уже набрана :(  \n\n";
+				}
+
+				else {
+
+					secondGroup += 1;
+
+					student.groupNumber = 2;
+
+					student.groupID = secondGroup;
+					cout << "\nНомер студента в группе --> " << student.groupID;
+					flag = false;
+
+				}
+			}break;
+
+			case 3:
+			{
+				if (thirdGroup >= groupLimit) {
+					cout << "\n\nЭта группа уже набрана :( \n\n";
+				}
+
+				else {
+
+					thirdGroup += 1;
+
+					student.groupNumber = 3;
+
+					student.groupID = thirdGroup;
+					cout << "\nНомер студента в группе --> " << student.groupID;
+					flag = false;
+
+				}
+			}break;
+
+
+
+			}
+		}
+	}
+
+	float count = 0;
+	int grade;
+	flag = true;
+	bool successflag = true;
+	bool withoutScholarship = true;
+	while (flag) {
+		cout << "\nВведите оценки студента за экзамены и зачеты(через пробел) \n";
+		for (int i = 0; i < 8; i++) {
+
+			cin >> grade;
+
+			while (grade > 5 or grade < 2) {
+				loh();
+				cin >> grade;
+
+			}
+
+			if (grade > 0 and grade < 6) {
+				student.grade[i] = grade;
+
+				if (grade < 5) successflag = false;
+				if (grade < 4) withoutScholarship = false;
+
+				count += student.grade[i];
+				flag = false;
+			}
+
+
+		}
+	}
+
+	student.score = count / 8;
+	cout << "\n\nСредний балл студента равен " << student.score << "\n\n";
+
+	if (successflag == true) {
+		student.success = "Отличник";
+	}
+
+	if (successflag == false and withoutScholarship == true) {
+		student.success = "Хорошист";
+	}
+
+	if (successflag == false and withoutScholarship == false) {
+		student.success = "Троечник";
+	}
+
+	bool moneyFlag = true;
+	int money;
+	cout << "\n\nВведите достаток студента: ";
+	cin >> money;
+	while (student.money != money) {
+		if (moneyFlag != isdigit(money)) {
+			student.money = money;
+		}
+		else {
+			loh();
+			cin >> money;
+		}
+	}
+
+
+	database[student.ID] = student;
+	return student;
+}
 
 void changeStudent(int ID) {
 	int changeChoose;
@@ -750,8 +749,10 @@ void studentsHouse() {
 }
 
 int main() {
-	setlocale(0,"");
+	setlocale(LC_ALL, "Russian");
 	system("chcp 1251");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 
 
 	ofstream fout;
@@ -762,7 +763,6 @@ int main() {
 	bool openFile = true;
 	cout << "Доброго времени суток!\n\n";
 	
-	cout << sizeof(Student);
 		SetConsoleTextAttribute(handle, FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN);
 		cout << "У вас уже есть файл с записями студентов?\n1 - Да\n2 - Нет\n\nВаш выбор: ";
 		SetConsoleTextAttribute(handle, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN);
@@ -948,7 +948,7 @@ int main() {
 						}
 						else {
 							if (studentsCounter == 0) {
-								database[studentsCounter] = database[0].newStudent();
+								database[studentsCounter] = newStudent();
 								fout << database[studentsCounter].FIO << '\n';
 								fout << database[studentsCounter].sex << '\n';
 					 			fout << database[studentsCounter].groupNumber << '\n';
@@ -959,7 +959,7 @@ int main() {
 								fout<< '\n'<< database[studentsCounter].money ;
 							}
 							else {
-								database[studentsCounter] = database[0].newStudent();
+								database[studentsCounter] = newStudent();
 								fout << '\n' << database[studentsCounter].FIO << '\n';
 								fout << database[studentsCounter].sex << '\n';
 								fout << database[studentsCounter].groupNumber << '\n';
