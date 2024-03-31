@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <fstream>
 #include <string>
 #include <windows.h>
@@ -12,7 +12,7 @@ void loh() {
 	cin.clear();                           
 	cin.ignore(1000, '\n');  
 	SetConsoleTextAttribute(handle, FOREGROUND_RED );
-		cout << "Îøèáêà ââîäà. Ïîæàëóéñòà, ïîâòîðèòå ïîïûòêó." << endl;
+		cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð²Ð²Ð¾Ð´Ð°. ÐŸÐ¾Ð¶Ð°Ð»ÑƒÐ¹ÑÑ‚Ð°, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð¿Ð¾Ð¿Ñ‹Ñ‚ÐºÑƒ." << endl;
 	SetConsoleTextAttribute(handle, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN);
 }
 
@@ -54,7 +54,7 @@ void cocktailSort() {
 	while (swapped) {
 		swapped = false;
 
-		// Ïðîõîä ñëåâà íàïðàâî
+		// ÐŸÑ€Ð¾Ñ…Ð¾Ð´ ÑÐ»ÐµÐ²Ð° Ð½Ð°Ð¿Ñ€Ð°Ð²Ð¾
 		for (int i = start; i < end; ++i) {
 			if (database[i].money > database[i + 1].money) {
 				std::swap(database[i], database[i + 1]);
@@ -69,7 +69,7 @@ void cocktailSort() {
 		swapped = false;
 		--end;
 
-		// Ïðîõîä ñïðàâà íàëåâî
+		// ÐŸÑ€Ð¾Ñ…Ð¾Ð´ ÑÐ¿Ñ€Ð°Ð²Ð° Ð½Ð°Ð»ÐµÐ²Ð¾
 		for (int i = end - 1; i >= start; --i) {
 			if (database[i].money > database[i + 1].money) {
 				std::swap(database[i], database[i + 1]);
@@ -91,15 +91,15 @@ Student newStudent() {
 	string memory = "";
 
 
-	cout << "\n\nÂâåäèòå ôàìèëèþ ñòóäåíòà: ";
+	cout << "\n\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ„Ð°Ð¼Ð¸Ð»Ð¸ÑŽ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: ";
 	clearStream();
 	getline(cin, vvod);
 
-	cout << "\nÂâåäèòå èìÿ ñòóäåíòà: ";
+	cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: ";
 	getline(cin, memory);
 	vvod = vvod + " " + memory;
 
-	cout << "\nÂâåäèòå îò÷åñòâî ñòóäåíòà: ";
+	cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾Ñ‚Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: ";
 	getline(cin, memory);
 	vvod = vvod + " " + memory;
 
@@ -109,9 +109,9 @@ Student newStudent() {
 	char sex;
 	bool flag = true;
 	while (flag) {
-		cout << "\nÂâåäèòå ïîë ñòóäåíòà:\n1.Móæ÷èíà - Ì \n2.Æåíùèíà -  Æ\n3.Äðóãîå - Ä\n\nÂàø âûáîð: ";
+		cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ð¾Ð» ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°:\n1.MÑƒÐ¶Ñ‡Ð¸Ð½Ð° - Ðœ \n2.Ð–ÐµÐ½Ñ‰Ð¸Ð½Ð° -  Ð–\n3.Ð”Ñ€ÑƒÐ³Ð¾Ðµ - Ð”\n\nÐ’Ð°Ñˆ Ð²Ñ‹Ð±Ð¾Ñ€: ";
 		cin >> sex;
-		if (sex != 'Ì' and sex != 'Æ' and sex != 'Ä') {
+		if (sex != 'Ðœ' and sex != 'Ð–' and sex != 'Ð”') {
 			loh();
 		}
 
@@ -126,7 +126,7 @@ Student newStudent() {
 	flag = true;
 	int groupNumber;
 	while (flag) {
-		cout << "\nÂ êàêóþ ãðóïïó ñòóäåíò çà÷èñëåí? (1, 2 èëè 3)\n\nÂàø âûáîð: ";
+		cout << "\nÐ’ ÐºÐ°ÐºÑƒÑŽ Ð³Ñ€ÑƒÐ¿Ð¿Ñƒ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚ Ð·Ð°Ñ‡Ð¸ÑÐ»ÐµÐ½? (1, 2 Ð¸Ð»Ð¸ 3)\n\nÐ’Ð°Ñˆ Ð²Ñ‹Ð±Ð¾Ñ€: ";
 		cin >> groupNumber;
 
 		if (groupNumber != 1 and groupNumber != 2 and groupNumber != 3) {
@@ -145,7 +145,7 @@ Student newStudent() {
 			case 1:
 			{
 				if (firstGroup >= groupLimit) {
-					cout << "\n\nÝòà ãðóïïà óæå íàáðàíà :(  \n\n";
+					cout << "\n\nÐ­Ñ‚Ð° Ð³Ñ€ÑƒÐ¿Ð¿Ð° ÑƒÐ¶Ðµ Ð½Ð°Ð±Ñ€Ð°Ð½Ð° :(  \n\n";
 				}
 
 				else {
@@ -155,7 +155,7 @@ Student newStudent() {
 					student.groupNumber = 1;
 
 					student.groupID = firstGroup;
-					cout << "\nÍîìåð ñòóäåíòà â ãðóïïå --> " << student.groupID;
+					cout << "\nÐÐ¾Ð¼ÐµÑ€ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° Ð² Ð³Ñ€ÑƒÐ¿Ð¿Ðµ --> " << student.groupID;
 					flag = false;
 
 				}
@@ -164,7 +164,7 @@ Student newStudent() {
 			case 2:
 			{
 				if (secondGroup >= groupLimit) {
-					cout << "\n\nÝòà ãðóïïà óæå íàáðàíà :(  \n\n";
+					cout << "\n\nÐ­Ñ‚Ð° Ð³Ñ€ÑƒÐ¿Ð¿Ð° ÑƒÐ¶Ðµ Ð½Ð°Ð±Ñ€Ð°Ð½Ð° :(  \n\n";
 				}
 
 				else {
@@ -174,7 +174,7 @@ Student newStudent() {
 					student.groupNumber = 2;
 
 					student.groupID = secondGroup;
-					cout << "\nÍîìåð ñòóäåíòà â ãðóïïå --> " << student.groupID;
+					cout << "\nÐÐ¾Ð¼ÐµÑ€ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° Ð² Ð³Ñ€ÑƒÐ¿Ð¿Ðµ --> " << student.groupID;
 					flag = false;
 
 				}
@@ -183,7 +183,7 @@ Student newStudent() {
 			case 3:
 			{
 				if (thirdGroup >= groupLimit) {
-					cout << "\n\nÝòà ãðóïïà óæå íàáðàíà :( \n\n";
+					cout << "\n\nÐ­Ñ‚Ð° Ð³Ñ€ÑƒÐ¿Ð¿Ð° ÑƒÐ¶Ðµ Ð½Ð°Ð±Ñ€Ð°Ð½Ð° :( \n\n";
 				}
 
 				else {
@@ -193,7 +193,7 @@ Student newStudent() {
 					student.groupNumber = 3;
 
 					student.groupID = thirdGroup;
-					cout << "\nÍîìåð ñòóäåíòà â ãðóïïå --> " << student.groupID;
+					cout << "\nÐÐ¾Ð¼ÐµÑ€ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° Ð² Ð³Ñ€ÑƒÐ¿Ð¿Ðµ --> " << student.groupID;
 					flag = false;
 
 				}
@@ -211,7 +211,7 @@ Student newStudent() {
 	bool successflag = true;
 	bool withoutScholarship = true;
 	while (flag) {
-		cout << "\nÂâåäèòå îöåíêè ñòóäåíòà çà ýêçàìåíû è çà÷åòû(÷åðåç ïðîáåë) \n";
+		cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾Ñ†ÐµÐ½ÐºÐ¸ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° Ð·Ð° ÑÐºÐ·Ð°Ð¼ÐµÐ½Ñ‹ Ð¸ Ð·Ð°Ñ‡ÐµÑ‚Ñ‹(Ñ‡ÐµÑ€ÐµÐ· Ð¿Ñ€Ð¾Ð±ÐµÐ») \n";
 		for (int i = 0; i < 8; i++) {
 
 			cin >> grade;
@@ -237,23 +237,23 @@ Student newStudent() {
 	}
 
 	student.score = count / 8;
-	cout << "\n\nÑðåäíèé áàëë ñòóäåíòà ðàâåí " << student.score << "\n\n";
+	cout << "\n\nÐ¡Ñ€ÐµÐ´Ð½Ð¸Ð¹ Ð±Ð°Ð»Ð» ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° Ñ€Ð°Ð²ÐµÐ½ " << student.score << "\n\n";
 
 	if (successflag == true) {
-		student.success = "Îòëè÷íèê";
+		student.success = "ÐžÑ‚Ð»Ð¸Ñ‡Ð½Ð¸Ðº";
 	}
 
 	if (successflag == false and withoutScholarship == true) {
-		student.success = "Õîðîøèñò";
+		student.success = "Ð¥Ð¾Ñ€Ð¾ÑˆÐ¸ÑÑ‚";
 	}
 
 	if (successflag == false and withoutScholarship == false) {
-		student.success = "Òðîå÷íèê";
+		student.success = "Ð¢Ñ€Ð¾ÐµÑ‡Ð½Ð¸Ðº";
 	}
 
 	bool moneyFlag = true;
 	int money;
-	cout << "\n\nÂâåäèòå äîñòàòîê ñòóäåíòà: ";
+	cout << "\n\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð¾ÑÑ‚Ð°Ñ‚Ð¾Ðº ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: ";
 	cin >> money;
 	while (student.money != money) {
 		if (moneyFlag != isdigit(money)) {
@@ -272,7 +272,7 @@ Student newStudent() {
 
 void changeStudent(int ID) {
 	int changeChoose;
-	cout << "\n\nÂûáåðèòå äàííûå, êîòîðûå âû õîòèòå ïîìåíÿòü: \n1.ÔÈÎ \n2.Ïîë \n3. Íîìåð ãðóïïû \n4. Îöåíêè\n5. Äîñòàòîê\n\nÂàø âûáîð: ";
+	cout << "\n\nÐ’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ðµ Ð²Ñ‹ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ Ð¿Ð¾Ð¼ÐµÐ½ÑÑ‚ÑŒ: \n1.Ð¤Ð˜Ðž \n2.ÐŸÐ¾Ð» \n3. ÐÐ¾Ð¼ÐµÑ€ Ð³Ñ€ÑƒÐ¿Ð¿Ñ‹ \n4. ÐžÑ†ÐµÐ½ÐºÐ¸\n5. Ð”Ð¾ÑÑ‚Ð°Ñ‚Ð¾Ðº\n\nÐ’Ð°Ñˆ Ð²Ñ‹Ð±Ð¾Ñ€: ";
 	cin >> changeChoose;
 	switch (changeChoose){
 
@@ -285,15 +285,15 @@ void changeStudent(int ID) {
 			string memory = "";
 
 
-			cout << "\n\nÂâåäèòå ôàìèëèþ ñòóäåíòà: ";
+			cout << "\n\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ„Ð°Ð¼Ð¸Ð»Ð¸ÑŽ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: ";
 			clearStream();
 			getline(cin, vvod);
 
-			cout << "\nÂâåäèòå èìÿ ñòóäåíòà: ";
+			cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: ";
 			getline(cin, memory);
 			vvod = vvod + " " + memory;
 
-			cout << "\nÂâåäèòå îò÷åñòâî ñòóäåíòà: ";
+			cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾Ñ‚Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: ";
 			getline(cin, memory);
 			vvod = vvod + " " + memory;
 
@@ -305,9 +305,9 @@ void changeStudent(int ID) {
 			char sex;
 			bool flag = true;
 			while (flag) {
-				cout << "\nÂâåäèòå ïîë ñòóäåíòà:\n1.Móæ÷èíà - Ì \n2.Æåíùèíà -  Æ\n3.Äðóãîå - Ä\n\nÂàø âûáîð: ";
+				cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ð¾Ð» ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°:\n1.MÑƒÐ¶Ñ‡Ð¸Ð½Ð° - Ðœ \n2.Ð–ÐµÐ½Ñ‰Ð¸Ð½Ð° -  Ð–\n3.Ð”Ñ€ÑƒÐ³Ð¾Ðµ - Ð”\n\nÐ’Ð°Ñˆ Ð²Ñ‹Ð±Ð¾Ñ€: ";
 				cin >> sex;
-				if (sex != 'Ì' and sex != 'Æ' and sex != 'Ä') {
+				if (sex != 'Ðœ' and sex != 'Ð–' and sex != 'Ð”') {
 					loh();
 				}
 
@@ -350,7 +350,7 @@ void changeStudent(int ID) {
 			}
 
 			while (flag) {
-				cout << "\n Â êàêóþ ãðóïïó ñòóäåíò çà÷èñëåí? (1, 2 èëè 3)\n\nÂàø âûáîð: ";
+				cout << "\n Ð’ ÐºÐ°ÐºÑƒÑŽ Ð³Ñ€ÑƒÐ¿Ð¿Ñƒ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚ Ð·Ð°Ñ‡Ð¸ÑÐ»ÐµÐ½? (1, 2 Ð¸Ð»Ð¸ 3)\n\nÐ’Ð°Ñˆ Ð²Ñ‹Ð±Ð¾Ñ€: ";
 				cin >> groupNumber;
 
 				if (groupNumber != 1 and groupNumber != 2 and groupNumber != 3) {
@@ -369,7 +369,7 @@ void changeStudent(int ID) {
 						case 1:
 						{
 							if (firstGroup > groupLimit) {
-								cout << "\n\nÝòà ãðóïïà óæå íàáðàíà :(  \n\n";
+								cout << "\n\nÐ­Ñ‚Ð° Ð³Ñ€ÑƒÐ¿Ð¿Ð° ÑƒÐ¶Ðµ Ð½Ð°Ð±Ñ€Ð°Ð½Ð° :(  \n\n";
 							}
 
 							else {
@@ -379,7 +379,7 @@ void changeStudent(int ID) {
 								database[ID].groupNumber = 1;
 
 								database[ID].groupID = firstGroup;
-								cout << "\nÍîìåð ñòóäåíòà â ãðóïïå --> \n" << database[ID].groupID;
+								cout << "\nÐÐ¾Ð¼ÐµÑ€ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° Ð² Ð³Ñ€ÑƒÐ¿Ð¿Ðµ --> \n" << database[ID].groupID;
 								flag = false;
 
 							}
@@ -388,7 +388,7 @@ void changeStudent(int ID) {
 						case 2:
 						{
 							if (secondGroup > groupLimit) {
-								cout << "\n\nÝòà ãðóïïà óæå íàáðàíà :(  \n\n";
+								cout << "\n\nÐ­Ñ‚Ð° Ð³Ñ€ÑƒÐ¿Ð¿Ð° ÑƒÐ¶Ðµ Ð½Ð°Ð±Ñ€Ð°Ð½Ð° :(  \n\n";
 							}
 
 							else {
@@ -398,7 +398,7 @@ void changeStudent(int ID) {
 								database[ID].groupNumber = 2;
 
 								database[ID].groupID = secondGroup;
-								cout << "\nÍîìåð ñòóäåíòà â ãðóïïå --> \n" << database[ID].groupID;
+								cout << "\nÐÐ¾Ð¼ÐµÑ€ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° Ð² Ð³Ñ€ÑƒÐ¿Ð¿Ðµ --> \n" << database[ID].groupID;
 								flag = false;
 
 							}
@@ -407,7 +407,7 @@ void changeStudent(int ID) {
 						case 3:
 						{
 							if (thirdGroup > groupLimit) {
-								cout << "\n\nÝòà ãðóïïà óæå íàáðàíà :( \n\n";
+								cout << "\n\nÐ­Ñ‚Ð° Ð³Ñ€ÑƒÐ¿Ð¿Ð° ÑƒÐ¶Ðµ Ð½Ð°Ð±Ñ€Ð°Ð½Ð° :( \n\n";
 							}
 
 							else {
@@ -417,7 +417,7 @@ void changeStudent(int ID) {
 								database[ID].groupNumber = 3;
 
 								database[ID].groupID = thirdGroup;
-								cout << "\nÍîìåð ñòóäåíòà â ãðóïïå --> \n" << database[ID].groupID;
+								cout << "\nÐÐ¾Ð¼ÐµÑ€ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° Ð² Ð³Ñ€ÑƒÐ¿Ð¿Ðµ --> \n" << database[ID].groupID;
 								flag = false;
 
 							}
@@ -436,7 +436,7 @@ void changeStudent(int ID) {
 		case 4: {
 			float count = 0;
 			int grade;
-			cout << "\nÂâåäèòå îöåíêè ñòóäåíòà çà ýêçàìåíû è çà÷åòû(÷åðåç ïðîáåë) \n";
+			cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾Ñ†ÐµÐ½ÐºÐ¸ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° Ð·Ð° ÑÐºÐ·Ð°Ð¼ÐµÐ½Ñ‹ Ð¸ Ð·Ð°Ñ‡ÐµÑ‚Ñ‹(Ñ‡ÐµÑ€ÐµÐ· Ð¿Ñ€Ð¾Ð±ÐµÐ») \n";
 			for (int i = 0; i < 8; i++) {
 
 				cin >> grade;
@@ -454,13 +454,13 @@ void changeStudent(int ID) {
 			}
 
 			database[ID].score = count / 8;
-			cout << "\n\nÑðåäíèé áàëë ñòóäåíòà ðàâåí " << database[ID].score << "\n\n";
+			cout << "\n\nÐ¡Ñ€ÐµÐ´Ð½Ð¸Ð¹ Ð±Ð°Ð»Ð» ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° Ñ€Ð°Ð²ÐµÐ½ " << database[ID].score << "\n\n";
 		}break;
 
 		case 5: {
 			bool moneyFlag = true;
 			int money;
-			cout << "\n\nÂâåäèòå äîñòàòîê ñòóäåíòà: ";
+			cout << "\n\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð¾ÑÑ‚Ð°Ñ‚Ð¾Ðº ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: ";
 			cin >> money;
 			while (database[ID].money != money) {
 				if (moneyFlag != isdigit(money)) {
@@ -485,18 +485,18 @@ void showAllStudent() {
 		SetConsoleTextAttribute(handle, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN);
 		cout<< ".  " << database[i].FIO;
 		cout << "\nID: " << database[i].ID;
-		cout << "\nÏîë: " << database[i].sex;
-		cout << "\nÃðóïïà: " << database[i].groupNumber;
-		cout << "\nÍîìåð â ãðóïïå: " << database[i].groupID;
+		cout << "\nÐŸÐ¾Ð»: " << database[i].sex;
+		cout << "\nÐ“Ñ€ÑƒÐ¿Ð¿Ð°: " << database[i].groupNumber;
+		cout << "\nÐÐ¾Ð¼ÐµÑ€ Ð² Ð³Ñ€ÑƒÐ¿Ð¿Ðµ: " << database[i].groupID;
 		cout << "\n" << database[i].success;
 		
-		cout << "\nÎöåíêè: \n";
+		cout << "\nÐžÑ†ÐµÐ½ÐºÐ¸: \n";
 		for (int j = 0; j < 7; j++) {
 			cout << database[i].grade[j] << ", ";
 		}
 		cout << database[i].grade[7];
-		cout<< "\nÑðåäíèé áàëë: " << database[i].score ;
-		cout << "\nÄîñòàòîê :" << database[i].money<< "\n\n";
+		cout<< "\nÐ¡Ñ€ÐµÐ´Ð½Ð¸Ð¹ Ð±Ð°Ð»Ð»: " << database[i].score ;
+		cout << "\nÐ”Ð¾ÑÑ‚Ð°Ñ‚Ð¾Ðº :" << database[i].money<< "\n\n";
 	}
 }
 
@@ -509,11 +509,11 @@ void showGroupmates(int num) {
 				SetConsoleTextAttribute(handle, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN);
 				cout<< ".  " << database[i].FIO;
 				cout << "\nID: " << database[i].ID;
-				cout << "\nÏîë: " << database[i].sex;
-				cout << "\nÃðóïïà: " << database[i].groupNumber;
-				cout << "\nÍîìåð â ãðóïïå: " << database[i].groupID;
+				cout << "\nÐŸÐ¾Ð»: " << database[i].sex;
+				cout << "\nÐ“Ñ€ÑƒÐ¿Ð¿Ð°: " << database[i].groupNumber;
+				cout << "\nÐÐ¾Ð¼ÐµÑ€ Ð² Ð³Ñ€ÑƒÐ¿Ð¿Ðµ: " << database[i].groupID;
 
-				cout << "\nÎöåíêè: \n";
+				cout << "\nÐžÑ†ÐµÐ½ÐºÐ¸: \n";
 				for (int j = 0; j < 8; j++) {
 					cout << database[i].grade[j] << ", ";
 				}
@@ -583,54 +583,54 @@ void topStudent(){
 
 	}
 
-	// ëó÷øèé
+	// Ð»ÑƒÑ‡ÑˆÐ¸Ð¹
 	SetConsoleTextAttribute(handle, FOREGROUND_BLUE);
 	cout << "1.  ";
 	SetConsoleTextAttribute(handle, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN); 
 	cout<< goldStudent.FIO;
 	cout << "\nID: " << goldStudent.ID;
-	cout << "\nÏîë: " << goldStudent.sex;
-	cout << "\nÃðóïïà: " << goldStudent.groupNumber;
-	cout << "\nÍîìåð â ñïèñêå: " << goldStudent.groupID;
+	cout << "\nÐŸÐ¾Ð»: " << goldStudent.sex;
+	cout << "\nÐ“Ñ€ÑƒÐ¿Ð¿Ð°: " << goldStudent.groupNumber;
+	cout << "\nÐÐ¾Ð¼ÐµÑ€ Ð² ÑÐ¿Ð¸ÑÐºÐµ: " << goldStudent.groupID;
 
-	cout << "\nÎöåíêè: \n";
+	cout << "\nÐžÑ†ÐµÐ½ÐºÐ¸: \n";
 	
 	for (int j = 0; j < 8; j++) {
 		cout  << goldStudent.grade[j] << ", ";
 	}
-	cout << "\nÑðåäíèé áàëë: " << goldStudent.score << "\n";
+	cout << "\nÐ¡Ñ€ÐµÐ´Ð½Ð¸Ð¹ Ð±Ð°Ð»Ð»: " << goldStudent.score << "\n";
 
-	//ñðåäíè
+	//ÑÑ€ÐµÐ´Ð½Ð¸
 	SetConsoleTextAttribute(handle, FOREGROUND_BLUE);
 	cout << "2.  ";
 	SetConsoleTextAttribute(handle, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN);
 	cout<< silverStudent.FIO;
 	cout << "\nID: " << silverStudent.ID;
-	cout << "\nÏîë: " << silverStudent.sex;
-	cout << "\nÃðóïïà: " << silverStudent.groupNumber;
-	cout << "\nÍîìåð â ñïèñêå: " << silverStudent.groupID;
+	cout << "\nÐŸÐ¾Ð»: " << silverStudent.sex;
+	cout << "\nÐ“Ñ€ÑƒÐ¿Ð¿Ð°: " << silverStudent.groupNumber;
+	cout << "\nÐÐ¾Ð¼ÐµÑ€ Ð² ÑÐ¿Ð¸ÑÐºÐµ: " << silverStudent.groupID;
 
-	cout << "\nÎöåíêè: \n";
+	cout << "\nÐžÑ†ÐµÐ½ÐºÐ¸: \n";
 	for (int j = 0; j < 8; j++) {
 		cout  << silverStudent.grade[j] << ", ";
 	}
-	cout << "\nÑðåäíèé áàëë: " << silverStudent.score << "\n";
+	cout << "\nÐ¡Ñ€ÐµÐ´Ð½Ð¸Ð¹ Ð±Ð°Ð»Ð»: " << silverStudent.score << "\n";
 
-	//ãëóïè
+	//Ð³Ð»ÑƒÐ¿Ð¸
 	SetConsoleTextAttribute(handle, FOREGROUND_BLUE);
 	cout << "3.  ";
 	SetConsoleTextAttribute(handle, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN);
 	cout<<bronzeStudent.FIO;
 	cout << "\nID: " << bronzeStudent.ID;
-	cout << "\nÏîë: " << bronzeStudent.sex;
-	cout << "\nÃðóïïà: " << bronzeStudent.groupNumber;
-	cout << "\nÍîìåð â ñïèñêå: " << bronzeStudent.groupID;
+	cout << "\nÐŸÐ¾Ð»: " << bronzeStudent.sex;
+	cout << "\nÐ“Ñ€ÑƒÐ¿Ð¿Ð°: " << bronzeStudent.groupNumber;
+	cout << "\nÐÐ¾Ð¼ÐµÑ€ Ð² ÑÐ¿Ð¸ÑÐºÐµ: " << bronzeStudent.groupID;
 
-	cout << "\nÎöåíêè: \n";
+	cout << "\nÐžÑ†ÐµÐ½ÐºÐ¸: \n";
 	for (int j = 0; j < 8; j++) {
 		cout  << bronzeStudent.grade[j] << ", ";
 	}
-	cout << "\nÑðåäíèé áàëë: " << bronzeStudent.score << "\n";
+	cout << "\nÐ¡Ñ€ÐµÐ´Ð½Ð¸Ð¹ Ð±Ð°Ð»Ð»: " << bronzeStudent.score << "\n";
 }
 
 void sexSplitUp() {
@@ -639,11 +639,11 @@ void sexSplitUp() {
 	int man = 0;
 	int undefinite = 0;
 	for (int i = 0; i < studentsCounter; i++) {
-		if (database[i].sex == 'Ä') {
+		if (database[i].sex == 'Ð”') {
 			undefinite++;
 			continue;
 		}
-		if (database[i].sex == 'Æ') {
+		if (database[i].sex == 'Ð–') {
 			woman++;
 			continue;
 		}
@@ -651,73 +651,73 @@ void sexSplitUp() {
 			man++;
 	}
 
-	cout << "\nÊîëè÷åñòâî äåâóøåê â óíèâåðñèòåòå:" << woman << "\nÊîëè÷åñòâî ïàðíåé â óíèâåðñèòåòå:" << man << "\nÊîëè÷åñòâî íåîïðåäåëèâøèõñÿ â óíèâåðñèòåòå:" << undefinite;
+	cout << "\nÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð´ÐµÐ²ÑƒÑˆÐµÐº Ð² ÑƒÐ½Ð¸Ð²ÐµÑ€ÑÐ¸Ñ‚ÐµÑ‚Ðµ:" << woman << "\nÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¿Ð°Ñ€Ð½ÐµÐ¹ Ð² ÑƒÐ½Ð¸Ð²ÐµÑ€ÑÐ¸Ñ‚ÐµÑ‚Ðµ:" << man << "\nÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð½ÐµÐ¾Ð¿Ñ€ÐµÐ´ÐµÐ»Ð¸Ð²ÑˆÐ¸Ñ…ÑÑ Ð² ÑƒÐ½Ð¸Ð²ÐµÑ€ÑÐ¸Ñ‚ÐµÑ‚Ðµ:" << undefinite;
 }
 
 void scholarship() {
-	cout << "\n\nÎòëè÷íèêè:";
+	cout << "\n\nÐžÑ‚Ð»Ð¸Ñ‡Ð½Ð¸ÐºÐ¸:";
 	for (int i = 0; i < studentsCounter; i++) {
 		
-		if (database[i].success == "Îòëè÷íèê") {
+		if (database[i].success == "ÐžÑ‚Ð»Ð¸Ñ‡Ð½Ð¸Ðº") {
 
 			cout <<"\n"<< i + 1 << ".  " << database[i].FIO;
 			cout << "\nID: " << database[i].ID;
-			cout << "\nÏîë: " << database[i].sex;
-			cout << "\nÃðóïïà: " << database[i].groupNumber;
-			cout << "\nÍîìåð â ãðóïïå: " << database[i].groupID;
+			cout << "\nÐŸÐ¾Ð»: " << database[i].sex;
+			cout << "\nÐ“Ñ€ÑƒÐ¿Ð¿Ð°: " << database[i].groupNumber;
+			cout << "\nÐÐ¾Ð¼ÐµÑ€ Ð² Ð³Ñ€ÑƒÐ¿Ð¿Ðµ: " << database[i].groupID;
 			cout << "\n" << database[i].success;
 
-			cout << "\nÎöåíêè: \n";
+			cout << "\nÐžÑ†ÐµÐ½ÐºÐ¸: \n";
 			for (int j = 0; j < 8; j++) {
 				cout << database[i].grade[j] << ", ";
 			}
-			cout << "\nÑðåäíèé áàëë: " << database[i].score << "\n\n";
+			cout << "\nÐ¡Ñ€ÐµÐ´Ð½Ð¸Ð¹ Ð±Ð°Ð»Ð»: " << database[i].score << "\n\n";
 		}
 	}
 	
-	cout << "\n\nÕîðîøèñòû:";
+	cout << "\n\nÐ¥Ð¾Ñ€Ð¾ÑˆÐ¸ÑÑ‚Ñ‹:";
 	for (int i = 0; i < studentsCounter; i++) {
 		
-		if (database[i].success == "Õîðîøèñò") {
+		if (database[i].success == "Ð¥Ð¾Ñ€Ð¾ÑˆÐ¸ÑÑ‚") {
 
 			cout << "\n" << i + 1 << ".  " << database[i].FIO;
 			cout << "\nID: " << database[i].ID;
-			cout << "\nÏîë: " << database[i].sex;
-			cout << "\nÃðóïïà: " << database[i].groupNumber;
-			cout << "\nÍîìåð â ãðóïïå: " << database[i].groupID;
+			cout << "\nÐŸÐ¾Ð»: " << database[i].sex;
+			cout << "\nÐ“Ñ€ÑƒÐ¿Ð¿Ð°: " << database[i].groupNumber;
+			cout << "\nÐÐ¾Ð¼ÐµÑ€ Ð² Ð³Ñ€ÑƒÐ¿Ð¿Ðµ: " << database[i].groupID;
 
 
-			cout << "\nÎöåíêè: \n";
+			cout << "\nÐžÑ†ÐµÐ½ÐºÐ¸: \n";
 			for (int j = 0; j < 8; j++) {
 				cout << database[i].grade[j] << ", ";
 			}
-			cout << "\nÑðåäíèé áàëë: " << database[i].score << "\n\n";
+			cout << "\nÐ¡Ñ€ÐµÐ´Ð½Ð¸Ð¹ Ð±Ð°Ð»Ð»: " << database[i].score << "\n\n";
 		}
 	}
 	
-	cout << "\n\nÍå ïîëó÷àþò ñòèïåíäèþ:";
+	cout << "\n\nÐÐµ Ð¿Ð¾Ð»ÑƒÑ‡Ð°ÑŽÑ‚ ÑÑ‚Ð¸Ð¿ÐµÐ½Ð´Ð¸ÑŽ:";
 	for (int i = 0; i < studentsCounter; i++) {
 		
-		if (database[i].success == "Òðîå÷íèê") {
+		if (database[i].success == "Ð¢Ñ€Ð¾ÐµÑ‡Ð½Ð¸Ðº") {
 
 			cout << "\n" << i + 1 << ".  " << database[i].FIO;
 			cout << "\nID: " << database[i].ID;
-			cout << "\nÏîë: " << database[i].sex;
-			cout << "\nÃðóïïà: " << database[i].groupNumber;
-			cout << "\nÍîìåð â ãðóïïå: " << database[i].groupID;
+			cout << "\nÐŸÐ¾Ð»: " << database[i].sex;
+			cout << "\nÐ“Ñ€ÑƒÐ¿Ð¿Ð°: " << database[i].groupNumber;
+			cout << "\nÐÐ¾Ð¼ÐµÑ€ Ð² Ð³Ñ€ÑƒÐ¿Ð¿Ðµ: " << database[i].groupID;
 
-			cout << "\nÎöåíêè: \n";
+			cout << "\nÐžÑ†ÐµÐ½ÐºÐ¸: \n";
 			for (int j = 0; j < 8; j++) {
 				cout << database[i].grade[j] << ", ";
 			}
-			cout << "\nÑðåäíèé áàëë: " << database[i].score << "\n\n";
+			cout << "\nÐ¡Ñ€ÐµÐ´Ð½Ð¸Ð¹ Ð±Ð°Ð»Ð»: " << database[i].score << "\n\n";
 		}
 	}
 }
 
 void groupIDCheck(int k) {
 	
-	cout << "\n\nÑòóäåíòû, Êîòîðûå ïîéäóò ê äîñêå "<< k << ":";
+	cout << "\n\nÐ¡Ñ‚ÑƒÐ´ÐµÐ½Ñ‚Ñ‹, ÐšÐ¾Ñ‚Ð¾Ñ€Ñ‹Ðµ Ð¿Ð¾Ð¹Ð´ÑƒÑ‚ Ðº Ð´Ð¾ÑÐºÐµ "<< k << ":";
 	for (int i = 0; i < studentsCounter; i++) {
 		
 		if (database[i].groupID == k) {
@@ -727,23 +727,23 @@ void groupIDCheck(int k) {
 			SetConsoleTextAttribute(handle, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN);
 			cout<< ".  " << database[i].FIO;
 			cout << "\nID: " << database[i].ID;
-			cout << "\nÏîë: " << database[i].sex;
-			cout << "\nÃðóïïà: " << database[i].groupNumber;
-			cout << "\nÍîìåð â ãðóïïå: " << database[i].groupID;
+			cout << "\nÐŸÐ¾Ð»: " << database[i].sex;
+			cout << "\nÐ“Ñ€ÑƒÐ¿Ð¿Ð°: " << database[i].groupNumber;
+			cout << "\nÐÐ¾Ð¼ÐµÑ€ Ð² Ð³Ñ€ÑƒÐ¿Ð¿Ðµ: " << database[i].groupID;
 			cout << "\n" << database[i].success;
 
-			cout << "\nÎöåíêè: \n";
+			cout << "\nÐžÑ†ÐµÐ½ÐºÐ¸: \n";
 			for (int j = 0; j < 8; j++) {
 				cout << database[i].grade[j] << ", ";
 			}
-			cout << "\nÑðåäíèé áàëë: " << database[i].score << "\n\n";
+			cout << "\nÐ¡Ñ€ÐµÐ´Ð½Ð¸Ð¹ Ð±Ð°Ð»Ð»: " << database[i].score << "\n\n";
 		}
 	}
 }
 
 void studentsHouse() {
 	cocktailSort();
-	cout << "\n\nÎ÷åðåäü íà îáùàãó:\n\n";
+	cout << "\n\nÐžÑ‡ÐµÑ€ÐµÐ´ÑŒ Ð½Ð° Ð¾Ð±Ñ‰Ð°Ð³Ñƒ:\n\n";
 	showAllStudent();
 	
 }
@@ -761,10 +761,10 @@ int main() {
 	char c;
 	string filePath="leti.txt";
 	bool openFile = true;
-	cout << "Äîáðîãî âðåìåíè ñóòîê!\n\n";
+	cout << "Ð”Ð¾Ð±Ñ€Ð¾Ð³Ð¾ Ð²Ñ€ÐµÐ¼ÐµÐ½Ð¸ ÑÑƒÑ‚Ð¾Ðº!\n\n";
 	
 		SetConsoleTextAttribute(handle, FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN);
-		cout << "Ó âàñ óæå åñòü ôàéë ñ çàïèñÿìè ñòóäåíòîâ?\n1 - Äà\n2 - Íåò\n\nÂàø âûáîð: ";
+		cout << "Ð£ Ð²Ð°Ñ ÑƒÐ¶Ðµ ÐµÑÑ‚ÑŒ Ñ„Ð°Ð¹Ð» Ñ Ð·Ð°Ð¿Ð¸ÑÑÐ¼Ð¸ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¾Ð²?\n1 - Ð”Ð°\n2 - ÐÐµÑ‚\n\nÐ’Ð°Ñˆ Ð²Ñ‹Ð±Ð¾Ñ€: ";
 		SetConsoleTextAttribute(handle, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN);
 		cin >> fileChoose;
 
@@ -780,7 +780,7 @@ int main() {
 				while (openFile) {
 
 					SetConsoleTextAttribute(handle, FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN);
-					cout << "\n\nÂâåäèòå ïîëíûé ïóòü ê ôàéëó: ";
+					cout << "\n\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ð¾Ð»Ð½Ñ‹Ð¹ Ð¿ÑƒÑ‚ÑŒ Ðº Ñ„Ð°Ð¹Ð»Ñƒ: ";
 					SetConsoleTextAttribute(handle, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN);
 					cin >> filePath;
 					fin.open(filePath);
@@ -788,7 +788,7 @@ int main() {
 					if (!fin.is_open()) {
 						SetConsoleTextAttribute(handle,  FOREGROUND_RED );
 						
-						cout << "\n\nÎøèáêà îòêðûòèÿ ôàéëà!!!";
+						cout << "\n\nÐžÑˆÐ¸Ð±ÐºÐ° Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°!!!";
 						SetConsoleTextAttribute(handle, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN);
 					}
 
@@ -797,7 +797,7 @@ int main() {
 						openFile = false;
 						SetConsoleTextAttribute(handle, FOREGROUND_GREEN);
 						
-						cout << "\n\nÔàéë îòêðûò!";
+						cout << "\n\nÐ¤Ð°Ð¹Ð» Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚!";
 						SetConsoleTextAttribute(handle, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN);
 
 						while (!fin.eof()) {
@@ -821,7 +821,7 @@ int main() {
 						}
 						fin.close();
 						
-						// ïðèñâîåíèå íîìåðà â ñïèñêå
+						// Ð¿Ñ€Ð¸ÑÐ²Ð¾ÐµÐ½Ð¸Ðµ Ð½Ð¾Ð¼ÐµÑ€Ð° Ð² ÑÐ¿Ð¸ÑÐºÐµ
 						
 						for (int i = 0; i < studentsCounter; i++) {
 							if (database[i].groupNumber == 1) {
@@ -867,15 +867,15 @@ int main() {
 							database[i].score =count / 8;
 
 							if (successflag == true) {
-								database[i].success = "Îòëè÷íèê";
+								database[i].success = "ÐžÑ‚Ð»Ð¸Ñ‡Ð½Ð¸Ðº";
 							}
 
 							if (successflag == false and withoutScholarship == true) {
-								database[i].success = "Õîðîøèñò";
+								database[i].success = "Ð¥Ð¾Ñ€Ð¾ÑˆÐ¸ÑÑ‚";
 							}
 
 							if (successflag == false and withoutScholarship == false) {
-								database[i].success = "Òðîå÷íèê";
+								database[i].success = "Ð¢Ñ€Ð¾ÐµÑ‡Ð½Ð¸Ðº";
 							}
 
 						}
@@ -887,7 +887,7 @@ int main() {
 			}
 
 			case 2: {
-				cout << "\n\nÒîãäà ìû ñîçäàäèì ñâîé :)\n";
+				cout << "\n\nÐ¢Ð¾Ð³Ð´Ð° Ð¼Ñ‹ ÑÐ¾Ð·Ð´Ð°Ð´Ð¸Ð¼ ÑÐ²Ð¾Ð¹ :)\n";
 			}break;
 
 		}
@@ -897,20 +897,20 @@ int main() {
 
 		while (choose != -1) {
 			SetConsoleTextAttribute(handle, FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN);
-			cout << "\n\nÂûáåðèòå äåéñòâèå èç ìåíþ íèæå è ââåäèòå ñîîòâåòñòâóþùóþ öèôðó:\n"\
-				"1. Äîáàâèòü íîâîãî ñòóäåíòà â áàçó.\n"\
-				"2. Èçìåíèòü äàííûå ñòóäåíòà.\n"\
-				"3. Âûâåñòè äàííûå âñåõ ñòóäåíòîâ.\n"\
-				"4. Âûâåñòè äàííûå ñòóäåíòîâ èç îäíîé ãðóïïû, êîòîðóþ âû âûûáåðåòå ñàìè.\n"\
-				"5. Âûâåñòè òîï 3 ñàìûõ óñïåøíûõ ñòóäåíòîâ.\n"\
-				"6. Ïîäñ÷èòàòü ñòóäåíòîâ ðàçíîãî ïîëà.\n"\
-				"7. Óçíàòü, êòî ó÷èòñÿ íà îòëè÷íî, êòî õîðîøî, à êòî íå ïîëó÷àåò ñòèïåíäèþ.\n"\
-				"8. Âûâåñòè âñåõ ñòóäåíòîâ ñ îäèíàêîâûì íîìåðîì â ãðóïïå, êîòîðûé âû âûáåðåòå ñàìè.\n"\
-				"9. Êòî æå âñ¸-òàêè ïîïàë â îáùàãó????\n"\
+			cout << "\n\nÐ’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ Ð¸Ð· Ð¼ÐµÐ½ÑŽ Ð½Ð¸Ð¶Ðµ Ð¸ Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ¾Ð¾Ñ‚Ð²ÐµÑ‚ÑÑ‚Ð²ÑƒÑŽÑ‰ÑƒÑŽ Ñ†Ð¸Ñ„Ñ€Ñƒ:\n"\
+				"1. Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð½Ð¾Ð²Ð¾Ð³Ð¾ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° Ð² Ð±Ð°Ð·Ñƒ.\n"\
+				"2. Ð˜Ð·Ð¼ÐµÐ½Ð¸Ñ‚ÑŒ Ð´Ð°Ð½Ð½Ñ‹Ðµ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°.\n"\
+				"3. Ð’Ñ‹Ð²ÐµÑÑ‚Ð¸ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð²ÑÐµÑ… ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¾Ð².\n"\
+				"4. Ð’Ñ‹Ð²ÐµÑÑ‚Ð¸ Ð´Ð°Ð½Ð½Ñ‹Ðµ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¾Ð² Ð¸Ð· Ð¾Ð´Ð½Ð¾Ð¹ Ð³Ñ€ÑƒÐ¿Ð¿Ñ‹, ÐºÐ¾Ñ‚Ð¾Ñ€ÑƒÑŽ Ð²Ñ‹ Ð²Ñ‹Ñ‹Ð±ÐµÑ€ÐµÑ‚Ðµ ÑÐ°Ð¼Ð¸.\n"\
+				"5. Ð’Ñ‹Ð²ÐµÑÑ‚Ð¸ Ñ‚Ð¾Ð¿ 3 ÑÐ°Ð¼Ñ‹Ñ… ÑƒÑÐ¿ÐµÑˆÐ½Ñ‹Ñ… ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¾Ð².\n"\
+				"6. ÐŸÐ¾Ð´ÑÑ‡Ð¸Ñ‚Ð°Ñ‚ÑŒ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¾Ð² Ñ€Ð°Ð·Ð½Ð¾Ð³Ð¾ Ð¿Ð¾Ð»Ð°.\n"\
+				"7. Ð£Ð·Ð½Ð°Ñ‚ÑŒ, ÐºÑ‚Ð¾ ÑƒÑ‡Ð¸Ñ‚ÑÑ Ð½Ð° Ð¾Ñ‚Ð»Ð¸Ñ‡Ð½Ð¾, ÐºÑ‚Ð¾ Ñ…Ð¾Ñ€Ð¾ÑˆÐ¾, Ð° ÐºÑ‚Ð¾ Ð½Ðµ Ð¿Ð¾Ð»ÑƒÑ‡Ð°ÐµÑ‚ ÑÑ‚Ð¸Ð¿ÐµÐ½Ð´Ð¸ÑŽ.\n"\
+				"8. Ð’Ñ‹Ð²ÐµÑÑ‚Ð¸ Ð²ÑÐµÑ… ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¾Ð² Ñ Ð¾Ð´Ð¸Ð½Ð°ÐºÐ¾Ð²Ñ‹Ð¼ Ð½Ð¾Ð¼ÐµÑ€Ð¾Ð¼ Ð² Ð³Ñ€ÑƒÐ¿Ð¿Ðµ, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ð²Ñ‹ Ð²Ñ‹Ð±ÐµÑ€ÐµÑ‚Ðµ ÑÐ°Ð¼Ð¸.\n"\
+				"9. ÐšÑ‚Ð¾ Ð¶Ðµ Ð²ÑÑ‘-Ñ‚Ð°ÐºÐ¸ Ð¿Ð¾Ð¿Ð°Ð» Ð² Ð¾Ð±Ñ‰Ð°Ð³Ñƒ????\n"\
 				"10. Exit\n";
 			SetConsoleTextAttribute(handle, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN);
 
-			cout << "\nÂàø âûáîð: ";
+			cout << "\nÐ’Ð°Ñˆ Ð²Ñ‹Ð±Ð¾Ñ€: ";
 			cin >> choose;
 
 			switch (choose) {
@@ -922,7 +922,7 @@ int main() {
 
 				case 10: {
 
-					cout << "\n\nÏîêa-ïîêa! :";
+					cout << "\n\nÐŸÐ¾Ðºa-Ð¿Ð¾Ðºa! :";
 					SetConsoleTextAttribute(handle, FOREGROUND_INTENSITY | FOREGROUND_BLUE);
 					cout << "_";
 					SetConsoleTextAttribute(handle, FOREGROUND_INTENSITY | FOREGROUND_RED );
@@ -934,7 +934,7 @@ int main() {
 
 				case 1: {		
 					if (studentsCounter + 1 > universitySize) {
-						cout << "\n\nÂ óíèâåðñèòåòå áîëüøå íåò áþäæåòíûõ ìåñò :(";
+						cout << "\n\nÐ’ ÑƒÐ½Ð¸Ð²ÐµÑ€ÑÐ¸Ñ‚ÐµÑ‚Ðµ Ð±Ð¾Ð»ÑŒÑˆÐµ Ð½ÐµÑ‚ Ð±ÑŽÐ´Ð¶ÐµÑ‚Ð½Ñ‹Ñ… Ð¼ÐµÑÑ‚ :(";
 					}
 					else {
 
@@ -942,7 +942,7 @@ int main() {
 						if (!fout.is_open()) {
 							SetConsoleTextAttribute(handle, FOREGROUND_RED );
 							
-							cout << "\n\nÎøèáêà îòêðûòèÿ ôàéëà!!!";
+							cout << "\n\nÐžÑˆÐ¸Ð±ÐºÐ° Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°!!!";
 							SetConsoleTextAttribute(handle, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN);
 							exit(0);
 						}
@@ -973,7 +973,7 @@ int main() {
 						fout.close();
 
 						SetConsoleTextAttribute(handle, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN);
-						cout << "\nÇàïèñü ñîçäàíà!\n";
+						cout << "\nÐ—Ð°Ð¿Ð¸ÑÑŒ ÑÐ¾Ð·Ð´Ð°Ð½Ð°!\n";
 						SetConsoleTextAttribute(handle, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN); 
 					}
 
@@ -984,7 +984,7 @@ int main() {
 					showAllStudent();
 					bool errorFlag = true;
 					while (errorFlag != false) {
-					cout << "\n\nÂûáåðèòå ñòóäåíòà, äàííûå êîòîðîãî âû õîòèòå ïîìåíÿòü è ââåäèòå åãî ID.\nÂàø âûáîð: ";
+					cout << "\n\nÐ’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°, Ð´Ð°Ð½Ð½Ñ‹Ðµ ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð³Ð¾ Ð²Ñ‹ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ Ð¿Ð¾Ð¼ÐµÐ½ÑÑ‚ÑŒ Ð¸ Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐµÐ³Ð¾ ID.\nÐ’Ð°Ñˆ Ð²Ñ‹Ð±Ð¾Ñ€: ";
 						cin >> ID;
 						if (ID<0 or ID>studentsCounter - 1){
 							loh();
@@ -1000,7 +1000,7 @@ int main() {
 					fout.open(filePath);
 					if (!fout.is_open()) {
 						SetConsoleTextAttribute(handle, FOREGROUND_RED );
-						cout << "\n\nÎøèáêà îòêðûòèÿ ôàéëà!!!";
+						cout << "\n\nÐžÑˆÐ¸Ð±ÐºÐ° Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°!!!";
 						SetConsoleTextAttribute(handle, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN);
 						exit(0);
 					}
@@ -1040,7 +1040,7 @@ int main() {
 				case 4: {
 					int groupChoose;
 
-					cout << "\n\nÂâåäèòå ãðóïïó: ";
+					cout << "\n\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð³Ñ€ÑƒÐ¿Ð¿Ñƒ: ";
 					cin >> groupChoose;
 					switch (groupChoose) {
 					case (!isdigit): {
@@ -1078,11 +1078,11 @@ int main() {
 
 				case 8: {
 					int numChoose;
-					cout << "\n\nÂâåäèòå íîìåð â ñïèñêå: ";
+					cout << "\n\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ð² ÑÐ¿Ð¸ÑÐºÐµ: ";
 					cin >> numChoose;
 					if (numChoose > 30 or numChoose < 1) {
 						loh();
-						cout << "Â ãðóïïå íå áîëüøå 30 ÷åëîâåê";
+						cout << "Ð’ Ð³Ñ€ÑƒÐ¿Ð¿Ðµ Ð½Ðµ Ð±Ð¾Ð»ÑŒÑˆÐµ 30 Ñ‡ÐµÐ»Ð¾Ð²ÐµÐº";
 					}
 
 					else {
